@@ -1,0 +1,17 @@
+<form action="/update"  class="form-control" method="POST">
+    {{#each posts}}
+    <h1>Código: </h1>
+      <div class="form-group">
+    <input type="text" class="form-control" name="id" value="{{id}}" readonly="true">
+    <p>Titulo: </p>
+    <input type="text" name="titulo" class="form-control" value="{{titulo}}">
+    <p>Conteúdo:</p>
+    <textarea name="conteudo" class="form-control">{{conteudo}}</textarea><br>
+    <p>Imagem</p>
+    <input type="text" name="img" class="form-control" value="{{img}}"> <br>
+    <center><img src="{{img}}" alt="" width="200px" height="200px"></center><br>
+    <input type="submit" class="btn btn-success" value="Alterar">
+    <hr>
+    </div>
+    {{/each}}
+</form>

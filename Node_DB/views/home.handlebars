@@ -1,0 +1,29 @@
+
+<div class="container mb-6">
+  <div  class ="shadow p-3 mb-5 bg-white rounded" >
+<center> 
+<h1 class="display-5">LISTA DE POSTAGENS</h1>
+</center>
+  </div>
+   <a href="/cad"><button type="button" class="btn btn-outline-success">Postar</button></a>
+   <br>  <br>
+{{#each posts}}
+<div class="card" style="width: 20rem;">
+    <img class="card-img-top" src="{{img}}" alt="Card image cap">
+    <div class="card-body">
+        
+<h5 class="card-title">Id: {{id}}</h5>
+<h5 class="card-title">Título: {{titulo}}</h5>
+
+<p class="card-text">Conteudo: {{conteudo}}
+</p>
+
+<p class="card-text">Data:
+    {{createdAt}}
+</p>
+<a href="/deletar/{{id}}" class="card-link">DELETAR</a>
+<a href="/alterar/{{id}}" class="card-link">ALTERAR</a>
+</div>
+</div>
+{{/each}}
+</div>
